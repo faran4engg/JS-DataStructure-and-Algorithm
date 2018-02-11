@@ -8,6 +8,7 @@
   true
  */
 
+//  custom logic
 function checkIsArray(input) {
   console.dir(input);
   console.log(toString.call(input));
@@ -19,6 +20,15 @@ function checkIsArray(input) {
   }
   return 'Input passed is not an Array'
 }
+
+// solution by using in-built method of Array :)
+function is_array(word) {
+  return Array.isArray(word)
+
+}
+
+console.log(is_array('w3resource')); //f
+console.log(is_array([1, 2, 4, 0]));
 
 console.log(checkIsArray('w3resource'));
 console.log(checkIsArray([1, 2, 4, 0]));
