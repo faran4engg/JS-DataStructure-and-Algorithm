@@ -40,10 +40,25 @@ Add to head Algo:
 - Link it with proper next and prev properties
 - Finally, update the head pointer pointing to new node
 */
-LinkedList.prototype.addToHead = function (value, ) {
+LinkedList.prototype.addToHead = function (value) {
 
-  let newNode = new Node(value, this.head, null);
   // this.head is the curent node, so updating it as next of our newNode
   // setting null as prev bcz first node doesn't have any prev Node
+  let newNode = new Node(value, this.head, null);
+
+
+  if (this.head) {
+    // case 1 : LinkList is not empty
+    this.head.prev = newNode;
+
+  } else {
+    // case 2 : LinkList is empty. No node is present
+    this.tail = newNode;
+
+  }
+  // updating head pointer to newNode - in both cases
+  this.head = newNode;
+
 }
-let LL = new LinkedList();
+var LL = new LinkedList();
+
