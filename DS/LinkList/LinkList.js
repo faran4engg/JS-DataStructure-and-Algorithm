@@ -61,4 +61,8 @@ LinkedList.prototype.addToHead = function (value) {
 
 }
 var LL = new LinkedList();
-
+LL.addToHead(1);
+LL.addToHead(2);
+LL.addToHead(3);
+LL.addToHead(4);
+console.log(LL);
