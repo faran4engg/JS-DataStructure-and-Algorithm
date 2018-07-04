@@ -34,5 +34,16 @@ function Node(value, next, prev) {
   this.prev = prev;
 }
 
+/*
+Add to head Algo:
+- Create new Node and put it right at the beginning
+- Link it with proper next and prev properties
+- Finally, update the head pointer pointing to new node
+*/
+LinkedList.prototype.addToHead = function (value, ) {
+
+  let newNode = new Node(value, this.head, null);
+  // this.head is the curent node, so updating it as next of our newNode
+  // setting null as prev bcz first node doesn't have any prev Node
+}
 let LL = new LinkedList();
-console.log(LL);
