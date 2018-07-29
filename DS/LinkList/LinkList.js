@@ -139,6 +139,7 @@ console.log(length);
 var mid = LL.findMiddle();
 console.log(mid);
 
+// LL reverse 2 methods
 console.log(LL.reverse(LL.head));
 
 console.log(reverseDoublyLL(LL));
