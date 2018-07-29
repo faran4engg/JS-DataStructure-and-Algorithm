@@ -137,7 +137,7 @@ console.log(LL);
 console.log(length);
 
 var mid = LL.findMiddle();
-// console.log(mid);
+console.log(mid);
 
 console.log(LL.reverse(LL.head));
 
