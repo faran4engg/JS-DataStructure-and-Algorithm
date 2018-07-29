@@ -134,7 +134,7 @@ LL.addToHead(1);
 
 var length = LL.size();
 console.log(LL);
-// console.log(length);
+console.log(length);
 
 var mid = LL.findMiddle();
 // console.log(mid);
