@@ -85,7 +85,18 @@ LinkedList.prototype.size = function () {
 LinkedList.prototype.findMiddle = function () {
   if (!this.head) return "Linked List is empty";
 
+  var pointer1 = this.head;
+  var pointer2 = this.head.next;
 
+  while (pointer2) {
+
+    pointer1 = pointer1.next;
+    if (pointer2.next) {
+      pointer2 = pointer2.next.next;
+    }
+
+  }
+  return pointer1;
 }
 
 
@@ -94,6 +105,11 @@ LL.addToHead(1);
 LL.addToHead(2);
 LL.addToHead(3);
 LL.addToHead(4);
+LL.addToHead(5);
+
 var length = LL.size();
 console.log(LL);
 console.log(length);
+
+var mid = LL.findMiddle();
+console.log(mid)
