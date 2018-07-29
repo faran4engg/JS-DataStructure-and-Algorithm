@@ -99,17 +99,46 @@ LinkedList.prototype.findMiddle = function () {
   return pointer1;
 }
 
+LinkedList.prototype.reverse = function (head) {
+  if (head) {
+    this.reverse(head.next);
+    console.log(head.value);
+  }
 
+}
+
+function reverseDoublyLL(dll) {
+  var head = dll.head,
+    current = dll.head,
+    tmp;
+  while (current) {
+    tmp = current.next;
+    current.next = current.prev;
+    current.prev = tmp;
+    if (!tmp) {
+      //set the last node as header
+      dll.head = current;
+    }
+    current = tmp;
+  }
+  return dll;
+}
+
+// null 1 2 3 4 5 null
 var LL = new LinkedList();
-LL.addToHead(1);
-LL.addToHead(2);
-LL.addToHead(3);
-LL.addToHead(4);
 LL.addToHead(5);
+LL.addToHead(4);
+LL.addToHead(3);
+LL.addToHead(2);
+LL.addToHead(1);
 
 var length = LL.size();
 console.log(LL);
-console.log(length);
+// console.log(length);
 
 var mid = LL.findMiddle();
-console.log(mid)
+// console.log(mid);
+
+console.log(LL.reverse(LL.head));
+
+console.log(reverseDoublyLL(LL));
