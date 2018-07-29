@@ -61,6 +61,7 @@ LinkedList.prototype.addToHead = function (value) {
 
 }
 
+// LinkedList size
 LinkedList.prototype.size = function () {
   if (!this.head) return 0;
   var size = 0;
@@ -71,6 +72,23 @@ LinkedList.prototype.size = function () {
   }
   return size;
 }
+
+/* Logic to find middle with below illustration 
+    a    b    c    d    e    f    g     null
+12
+    1    2
+         1         2
+              1               2
+                    1                   2
+*/
+// LinkedList find middle
+LinkedList.prototype.findMiddle = function () {
+  if (!this.head) return "Linked List is empty";
+
+
+}
+
+
 var LL = new LinkedList();
 LL.addToHead(1);
 LL.addToHead(2);
