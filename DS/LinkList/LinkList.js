@@ -60,9 +60,22 @@ LinkedList.prototype.addToHead = function (value) {
   this.head = newNode;
 
 }
+
+LinkedList.prototype.size = function () {
+  if (!this.head) return 0;
+  var size = 0;
+  var pointer = this.head;
+  while (pointer) {
+    size++;
+    pointer = pointer.next;
+  }
+  return size;
+}
 var LL = new LinkedList();
 LL.addToHead(1);
 LL.addToHead(2);
 LL.addToHead(3);
 LL.addToHead(4);
+var length = LL.size();
 console.log(LL);
+console.log(length);
