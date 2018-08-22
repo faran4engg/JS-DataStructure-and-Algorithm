@@ -1,3 +1,4 @@
+
 function decimalToBinary(decimalNum) {
   let remainderStack = new Stack();
   let remainder;
